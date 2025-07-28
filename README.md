@@ -1,15 +1,14 @@
-<!-- Profile README — Ethan Ashworth -->
+<!-- Profile README — Ethan Ashworth (minimal + animated header) -->
 
-<h1 align="center">Ethan Ashworth</h1>
 <p align="center">
-  Software Engineering @ Carleton — AI • Full‑Stack • Odoo
+  <img src="hero.svg" alt="Ethan Ashworth — AI • Full‑Stack • Odoo" width="720">
 </p>
 
 <p align="center">
   <a href="https://Ethan-Ashworth.ca">🌐 Ethan-Ashworth.ca</a> &nbsp;•&nbsp;
-  <a href="https://www.linkedin.com/in/ethan-ashworth02/">💼 LinkedIn</a>
+  <a href="mailto:<your-email>">✉️ Email</a> &nbsp;•&nbsp;
+  <a href="<your-linkedin-url>">💼 LinkedIn</a>
 </p>
-
 ---
 
 ### In Progress Projects
