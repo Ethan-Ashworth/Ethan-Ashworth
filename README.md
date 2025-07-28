@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://Ethan-Ashworth.ca">🌐 Ethan-Ashworth.ca</a> &nbsp;•&nbsp;
-  <a href="<[your-linkedin-url](https://www.linkedin.com/in/ethan-ashworth02/)>">💼 LinkedIn</a>
+  <a href="https://www.linkedin.com/in/ethan-ashworth02/">💼 LinkedIn</a>
 </p>
 
 ---
