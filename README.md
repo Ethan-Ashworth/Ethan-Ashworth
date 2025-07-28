@@ -1,16 +1,29 @@
-## Hi there 👋
+<!-- Profile README — Ethan Ashworth -->
 
-<!--
-**Ethan-Ashworth/Ethan-Ashworth** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h1 align="center">Ethan Ashworth</h1>
+<p align="center">
+  Software Engineering @ Carleton — AI • Full‑Stack • Odoo
+</p>
 
-Here are some ideas to get you started:
+<p align="center">
+  <a href="https://Ethan-Ashworth.ca">🌐 Ethan-Ashworth.ca</a> &nbsp;•&nbsp;
+  <a href="<[your-linkedin-url](https://www.linkedin.com/in/ethan-ashworth02/)>">💼 LinkedIn</a>
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### In Progress Projects
+- Portfolio Website V2
+- React quiz/review web app (MCQ + Written questions w/ AI Grading)
+- Odoo modules
+
+---
+
+### Stack
+Java • C/C++ • Python • JavaScript • React • Tailwind • SQL • Git
+
+---
+
+### Currently
+Exploring AI Integrations into existing apps and making workflows smoother.
+
