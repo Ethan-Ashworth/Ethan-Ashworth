@@ -11,7 +11,7 @@
 ---
 
 ### In Progress Projects
-- Portfolio Website V2
+- Portfolio Website V2 - coming soon
 - React quiz/review web app (MCQ + Written questions w/ AI Grading)
 - Odoo modules
 
