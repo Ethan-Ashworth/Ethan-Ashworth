@@ -1,0 +1,52 @@
+<!-- assets/hero.svg -->
+<svg width="1200" height="220" viewBox="0 0 1200 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ethan Ashworth — Animated Header</title>
+  <desc id="desc">Subtle gradient shimmer on name with animated underline.</desc>
+
+  <!-- Background stays transparent for light/dark GitHub themes -->
+  <defs>
+    <!-- Moving gradient for text -->
+    <linearGradient id="grad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"  stop-color="#6EE7B7"/>
+      <stop offset="50%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#C4B5FD"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-600 0" to="600 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Underline stroke gradient -->
+    <linearGradient id="line" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#93C5FD" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#6EE7B7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C4B5FD" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Name -->
+  <g>
+    <text x="50%" y="100" text-anchor="middle"
+          font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+          font-size="56" font-weight="700"
+          fill="url(#grad)">
+      Ethan Ashworth
+    </text>
+
+    <!-- Tagline -->
+    <text x="50%" y="140" text-anchor="middle"
+          font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+          font-size="18" fill="currentColor" opacity="0.7">
+      AI • Full‑Stack • Odoo
+    </text>
+  </g>
+
+  <!-- Underline with subtle motion -->
+  <path d="M300 160 H900"
+        stroke="url(#line)" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="640 640" stroke-dashoffset="640">
+    <!-- One-time draw-in -->
+    <animate attributeName="stroke-dashoffset" from="640" to="0" dur="1.8s" fill="freeze"/>
+    <!-- Gentle looping shimmer -->
+    <animate attributeName="stroke-dasharray"
+             values="640 640; 320 320; 640 640"
+             dur="7s" repeatCount="indefinite" begin="2.1s"/>
+  </path>
+</svg>
