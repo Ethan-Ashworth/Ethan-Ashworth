@@ -32,16 +32,4 @@
       AI • Full‑Stack • Odoo
     </text>
   </g>
-
-  <!-- Underline with subtle motion -->
-  <path d="M300 160 H900"
-        stroke="url(#line)" stroke-width="3" stroke-linecap="round"
-        stroke-dasharray="640 640" stroke-dashoffset="640">
-    <!-- One-time draw-in -->
-    <animate attributeName="stroke-dashoffset" from="640" to="0" dur="1.8s" fill="freeze"/>
-    <!-- Gentle looping shimmer -->
-    <animate attributeName="stroke-dasharray"
-             values="640 640; 320 320; 640 640"
-             dur="7s" repeatCount="indefinite" begin="2.1s"/>
-  </path>
 </svg>
