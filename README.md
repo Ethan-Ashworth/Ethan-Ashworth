@@ -1,13 +1,13 @@
 <!-- Profile README — Ethan Ashworth (minimal + animated header) -->
 
-<p align="center">
-  <img src="hero.svg" alt="Ethan Ashworth — AI • Full‑Stack • Odoo" width="720">
-</p>
-
-<p align="center">
-  <a href="https://Ethan-Ashworth.ca">🌐 Ethan-Ashworth.ca</a> &nbsp;•&nbsp;
-  <a href="https://www.linkedin.com/in/ethan-ashworth02/">💼 LinkedIn</a>
-</p>
+<div align="center">
+  <img src="hero.svg" alt="Ethan Ashworth — AI • Full-Stack" width="760" />
+  <p>
+    <a href="https://ethan-ashworth.ca">🌐 ethan-ashworth.ca</a>
+    &nbsp;•&nbsp;
+    <a href="https://www.linkedin.com/in/ethan-ashworth02/">💼 LinkedIn</a>
+  </p>
+</div>
 ---
 
 ### In Progress Projects
