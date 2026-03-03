@@ -122,10 +122,14 @@
     </text>
   </g>
 
-  <!-- Scanning underline -->
-  <path d="M320 160 C 440 178, 760 178, 880 160"
-        stroke="url(#lineGrad)" stroke-width="4" stroke-linecap="round"
-        stroke-dasharray="36 520">
-    <animate attributeName="stroke-dashoffset" from="0" to="-556" dur="2.8s" repeatCount="indefinite"/>
-  </path>
+  <!-- Scanning underline (put this BEFORE the text group so it can't cut through text) -->
+     <path
+       d="M320 154 C 460 162, 740 162, 880 154"
+       stroke="url(#lineGrad)"
+       stroke-width="3.5"
+       stroke-linecap="round"
+       stroke-dasharray="36 520"
+       opacity="0.9">
+       <animate attributeName="stroke-dashoffset" from="0" to="-556" dur="2.8s" repeatCount="indefinite"/>
+     </path>
 </svg>
