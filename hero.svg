@@ -1,35 +1,131 @@
-<!-- assets/hero.svg -->
-<svg width="1200" height="220" viewBox="0 0 1200 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Ethan Ashworth — Animated Header</title>
-  <desc id="desc">Subtle gradient shimmer on name with animated underline.</desc>
+<!-- hero.svg -->
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ethan Ashworth — Header</title>
+  <desc id="desc">Modern animated gradient name with subtle grid, glow, and scanning underline.</desc>
 
-  <!-- Background stays transparent for light/dark GitHub themes -->
   <defs>
-    <!-- Moving gradient for text -->
-    <linearGradient id="grad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%"  stop-color="#6EE7B7"/>
-      <stop offset="50%" stop-color="#93C5FD"/>
-      <stop offset="100%" stop-color="#C4B5FD"/>
-      <animateTransform attributeName="gradientTransform" type="translate" from="-600 0" to="600 0" dur="6s" repeatCount="indefinite"/>
+    <!-- Theme-adaptive colors (based on OS theme) -->
+    <style>
+      :root {
+        --fg: #0f172a;
+        --muted: rgba(15, 23, 42, 0.68);
+        --grid: rgba(15, 23, 42, 0.08);
+        --soft: rgba(15, 23, 42, 0.06);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #e5e7eb;
+          --muted: rgba(229, 231, 235, 0.72);
+          --grid: rgba(229, 231, 235, 0.10);
+          --soft: rgba(229, 231, 235, 0.06);
+        }
+      }
+    </style>
+
+    <!-- Subtle background grid -->
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="var(--grid)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.2" fill="var(--grid)"/>
+    </pattern>
+
+    <!-- Soft blobs -->
+    <radialGradient id="blobA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(320 90) rotate(25) scale(420 260)">
+      <stop stop-color="#60A5FA" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="blobB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(900 210) rotate(-15) scale(520 320)">
+      <stop stop-color="#A78BFA" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Animated “shimmer” gradient for name -->
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#34D399"/>
+      <stop offset="35%"  stop-color="#60A5FA"/>
+      <stop offset="70%"  stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#34D399"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-700 0" to="700 0" dur="7s" repeatCount="indefinite"/>
     </linearGradient>
 
-  
+    <!-- Glow -->
+    <filter id="glow" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.22 0" result="softBlur"/>
+      <feMerge>
+        <feMergeNode in="softBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Underline gradient -->
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#60A5FA" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#A78BFA" stop-opacity="0.95"/>
+      <stop offset="80%" stop-color="#34D399" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-500 0" to="500 0" dur="3.8s" repeatCount="indefinite"/>
+    </linearGradient>
   </defs>
 
-  <!-- Name -->
-  <g>
-    <text x="50%" y="100" text-anchor="middle"
-          font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
-          font-size="56" font-weight="700"
-          fill="url(#grad)">
+  <!-- Background (transparent base) -->
+  <rect x="0" y="0" width="1200" height="300" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1200" height="300" fill="url(#blobA)"/>
+  <rect x="0" y="0" width="1200" height="300" fill="url(#blobB)"/>
+
+  <!-- Floating dots (very subtle) -->
+  <g opacity="0.35">
+    <circle cx="165" cy="210" r="3" fill="var(--soft)">
+      <animate attributeName="cy" values="210;198;210" dur="6.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1020" cy="85" r="3.5" fill="var(--soft)">
+      <animate attributeName="cy" values="85;96;85" dur="7.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="880" cy="245" r="2.6" fill="var(--soft)">
+      <animate attributeName="cy" values="245;235;245" dur="5.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="360" cy="70" r="2.8" fill="var(--soft)">
+      <animate attributeName="cy" values="70;82;70" dur="6.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Text block -->
+  <g text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+    <!-- Base name for readability (theme color) -->
+    <text x="600" y="140" font-size="66" font-weight="800" fill="var(--fg)" opacity="0.92">
+      Ethan Ashworth
+    </text>
+
+    <!-- Gradient shimmer overlay -->
+    <text x="600" y="140" font-size="66" font-weight="800" fill="url(#nameGrad)" filter="url(#glow)" opacity="0.95">
       Ethan Ashworth
     </text>
 
     <!-- Tagline -->
-    <text x="50%" y="140" text-anchor="middle"
-          font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
-          font-size="18" fill="currentColor" opacity="0.7">
-      AI • Full‑Stack • Odoo
+    <text x="600" y="185" font-size="18" font-weight="600" fill="var(--muted)" letter-spacing="0.6">
+      AI • Full-Stack • Product Engineering
+    </text>
+
+    <!-- Subtag -->
+    <text x="600" y="212" font-size="14" fill="var(--muted)" opacity="0.82">
+      Building practical systems and clean user experiences
     </text>
   </g>
+
+  <!-- Scanning underline -->
+  <path d="M320 160 C 440 178, 760 178, 880 160"
+        stroke="url(#lineGrad)" stroke-width="4" stroke-linecap="round"
+        stroke-dasharray="36 520">
+    <animate attributeName="stroke-dashoffset" from="0" to="-556" dur="2.8s" repeatCount="indefinite"/>
+  </path>
 </svg>
