@@ -8,6 +8,7 @@
     <a href="https://www.linkedin.com/in/ethan-ashworth02/">💼 LinkedIn</a>
   </p>
 </div>
+
 ---
 
 ### In Progress Projects
